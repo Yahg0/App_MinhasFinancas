@@ -3,9 +3,10 @@ package up.edu.br.minhasfinancas;
 import java.io.Serializable;
 
 public class Conta  implements Serializable{
+    // Conceito de serializable: tranforma em uma suposta "string" para poder passar o objeto
 
-    private String usuario;
     private Integer id;
+    private String usuario;
     private Double saldo;
     private Double poupanca;
     private String tipoDespesa;
