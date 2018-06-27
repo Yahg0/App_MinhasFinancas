@@ -4,10 +4,11 @@ import java.io.Serializable;
 
 public class Conta  implements Serializable{
 
+    private String usuario;
     private Integer id;
     private Double saldo;
     private Double poupanca;
-    private String nomeDespesa;
+    private String tipoDespesa;
     private Double despesa;
 
     public Integer getId() {
@@ -34,19 +35,27 @@ public class Conta  implements Serializable{
         this.poupanca = poupanca;
     }
 
-    public String getNomeDespesa() {
-        return nomeDespesa;
-    }
-
-    public void setNomeDespesa(String nomeDespesa) {
-        this.nomeDespesa = nomeDespesa;
-    }
-
     public Double getDespesa() {
         return despesa;
     }
 
     public void setDespesa(Double despesa) {
         this.despesa = despesa;
+    }
+
+    public String getTipoDespesa() {
+        return tipoDespesa;
+    }
+
+    public void setTipoDespesa(String tipoDespesa) {
+        this.tipoDespesa = tipoDespesa;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 }
