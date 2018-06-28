@@ -2,7 +2,7 @@ package up.edu.br.minhasfinancas;
 
 import java.io.Serializable;
 
-public class Conta  implements Serializable{
+public class Conta implements Serializable{
     // Conceito de serializable: tranforma em uma suposta "string" para poder passar o objeto
 
     private Integer id;
