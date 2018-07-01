@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">MinhasFinancas</string>
     <string name="action_settings">Settings</string>
+
+    //Array que mostra os itens no spinner(dropdown)
+
+    <array name="tipoDespesas">
+        <item>Lazer</item>
+        <item>Comida</item>
+        <item>Medicamento</item>
+        <item>Contas</item>
+        <item>Viajens</item>
+        <item>Gasolina</item>
+        <item>Telefone</item>
+        <item>Outros</item>
+    </array>
+
 </resources>
