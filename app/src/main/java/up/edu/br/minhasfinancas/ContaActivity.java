@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 public class ContaActivity extends AppCompatActivity {
 
+    Conta conta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

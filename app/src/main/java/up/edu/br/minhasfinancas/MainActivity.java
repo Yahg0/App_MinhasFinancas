@@ -1,5 +1,6 @@
 package up.edu.br.minhasfinancas;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,14 +22,44 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //new Conexao(getApplicationContext(), "contatos1.db", null, 1);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                Intent it = new Intent(MainActivity.this, ContaActivity.class);
+                startActivity(it);
             }
         });
+
+        // Lista os contatos
+        ListView listaContas = (ListView) findViewById(R.id.listaContas);
+
+        ContaAdapter contaAdapter = new ContaAdapter(new ContaDAO().listar(), this);
+
+        listaContas.setAdapter(contaAdapter);
+
+       listaContas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Conta c = (Conta) parent.getItemAtPosition(position);
+
+                //Mostra o nome do contato clicado na tela
+                Toast.makeText(MainActivity.this, "Conta: " + c.getUsuario(), Toast.LENGTH_SHORT).show();
+
+
+                //Usado para alterar a intention = navegar para a tela de cadastro da conta
+                Intent it = new Intent(MainActivity.this, ContaActivity.class);
+
+                //Carrega o objeto nos campos da intention aberta
+                // Conceito de serializable: tranforma em uma suposta "string" para poder passar o objeto
+                it.putExtra("conta", c);
+
+                startActivity(it);
+
     }
 
     @Override
