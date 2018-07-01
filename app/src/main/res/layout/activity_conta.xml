@@ -57,10 +57,10 @@
                 android:layout_width="12dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/user" />
+                app:srcCompat="@drawable/saldo" />
 
             <EditText
-                android:id="@+id/txtUsuario2"
+                android:id="@+id/txtSaldo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="9"
@@ -79,10 +79,10 @@
                 android:layout_width="12dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/user" />
+                app:srcCompat="@drawable/poupanca" />
 
             <EditText
-                android:id="@+id/txtUsuario3"
+                android:id="@+id/txtPoupanca"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="9"
@@ -101,7 +101,7 @@
                 android:layout_width="119dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/user" />
+                app:srcCompat="@drawable/checklist" />
 
             <Spinner
                 android:id="@+id/spTipoDespesa"
@@ -124,10 +124,10 @@
                 android:layout_width="12dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/user" />
+                app:srcCompat="@drawable/handsmoney" />
 
             <EditText
-                android:id="@+id/txtUsuario5"
+                android:id="@+id/txtDespesa"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="9"

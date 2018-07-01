@@ -42,10 +42,10 @@ public class ContaDAO {
                 Conta conta = new Conta();
                 conta.setId(c.getInt(0));
                 conta.setUsuario(c.getString(1));
-                conta.setSaldo(c.getDouble(2));
-                conta.setPoupanca(c.getDouble(3));
+                conta.setSaldo(c.getString(2));
+                conta.setPoupanca(c.getString(3));
                 conta.setTipoDespesa(c.getString(4));
-                conta.setDespesa(c.getDouble(5));
+                conta.setDespesa(c.getString(5));
 
                 contas.add(conta);
 

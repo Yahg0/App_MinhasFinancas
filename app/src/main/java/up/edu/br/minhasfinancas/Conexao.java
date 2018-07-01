@@ -37,5 +37,11 @@ public class Conexao extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+        if (oldVersion == 1) {
+//            if (newVersion > oldVersion){
+
+//            }
+
+        }
     }
 }

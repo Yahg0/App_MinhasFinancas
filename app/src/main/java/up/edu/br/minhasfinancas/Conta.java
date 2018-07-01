@@ -7,10 +7,21 @@ public class Conta implements Serializable{
 
     private Integer id;
     private String usuario;
-    private Double saldo;
-    private Double poupanca;
+    private String saldo;
+    private String poupanca;
     private String tipoDespesa;
-    private Double despesa;
+    private String despesa;
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (getId() == null || ((Conta)obj).getId() == null ){
+
+            return false;
+        }
+        return getId().equals(((Conta)obj).getId());
+    }
+
 
     public Integer getId() {
         return id;
@@ -20,28 +31,28 @@ public class Conta implements Serializable{
         this.id = id;
     }
 
-    public Double getSaldo() {
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(Double saldo) {
+    public void setSaldo(String saldo) {
         this.saldo = saldo;
     }
 
-    public Double getPoupanca() {
+    public String getPoupanca() {
         return poupanca;
     }
 
-    public void setPoupanca(Double poupanca) {
+    public void setPoupanca(String poupanca) {
         this.poupanca = poupanca;
-    }
-
-    public Double getDespesa() {
-        return despesa;
-    }
-
-    public void setDespesa(Double despesa) {
-        this.despesa = despesa;
     }
 
     public String getTipoDespesa() {
@@ -52,11 +63,11 @@ public class Conta implements Serializable{
         this.tipoDespesa = tipoDespesa;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getDespesa() {
+        return despesa;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setDespesa(String despesa) {
+        this.despesa = despesa;
     }
 }
